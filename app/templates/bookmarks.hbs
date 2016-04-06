@@ -1,0 +1,13 @@
+{{outlet}}
+{{!-- {{#each model as |bookmark|}} --}}
+
+<form {{action addBookmark on="submit"}}>
+  <h3>URL</h3>
+  {{input type="text" value=website}}
+
+  <h3>Nickname</h3>
+  {{input type="text" value=nickname}}
+
+  <button>Submit</button>
+</form>
+{{!-- {{/each}} --}}
