@@ -1,5 +1,4 @@
 {{outlet}}
-{{!-- {{#each model as |bookmark|}} --}}
 
 <form {{action addBookmark on="submit"}}>
   <h3>URL</h3>
@@ -9,5 +8,18 @@
   {{input type="text" value=nickname}}
 
   <button>Submit</button>
+
 </form>
-{{!-- {{/each}} --}}
+
+
+<h1>Bookmarks</h1>
+{{#each model as |bookmark|}}
+
+  <ul>
+    <li>
+      <h4>{{bookmark.nickname}}</h4>
+
+      <p>{{bookmark.website}}</p>
+    </li>
+    </ul>
+{{/each}}

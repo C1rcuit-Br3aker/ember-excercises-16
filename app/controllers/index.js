@@ -18,7 +18,6 @@ export default Ember.Controller.extend({
     }).then((res) => res.json())
     .then((person) => {
       this.clearForm();
-      this.addNewContact(person);
     });
   },
 
@@ -29,7 +28,4 @@ export default Ember.Controller.extend({
     this.set(`phone`, ``);
   },
 
-  addNewContact() {
-
-  }
 });

@@ -18,11 +18,16 @@ export default Ember.Controller.extend({
     }).then((res) => res.json())
     .then((bookmark) => {
       this.clearInputs();
+      this.showBookmarks(bookmark);
     });
   },
 
   clearInputs() {
     this.set(`website`, ``);
     this.set(`nickname`, ``);
+  },
+
+  showBookmarks(bookmark) {
+    this.set(`model`, [bookmark, ...this.model]);
   },
 });
